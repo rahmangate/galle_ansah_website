@@ -1,7 +1,11 @@
 
+
+
+
+
+
 $(document).ready(function(){
     
-
     // Detect request animation frame
 var scroll = window.requestAnimationFrame ||
 // IE Fallback
@@ -44,15 +48,6 @@ rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
 }
 
 
-
-    $(".img-cover").on("click",(ev)=>{
-        
-            //let src=$(ev.target).parent().css('background-image').replace('url("','').replace('")','')
-        // $('.img-modal-body').html('<img src="'+img+'" alt />')
-        // $('.img-modal').show(400)
-    
-    })
-
     $(".show-bg-img").not("a").on("click",(ev)=>{
         ev.preventDefault();
         let image=$(ev.target).css('background-image')
@@ -71,12 +66,20 @@ rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
         $('.img-modal').show(400)
     })
 
-
-
     $(".img-modal").on("click",(ev)=>{
         ev.stopPropagation()
         $('.img-modal').hide(5000)
         
+    })
+
+    $('.contact-form form').on('submit',(ev)=>{
+        ev.preventDefault()
+        confirm("Do you want to send this message?") ;
+
+    })
+
+    $('.news-letter-form button').on('click',(ev)=>{
+        confirm("Do you want to subscribe for our news letter?") ;
     })
 
 })

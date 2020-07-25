@@ -37,8 +37,17 @@ body{
 .navbar{
     border-bottom:solid 2px  #ff5744;
     background-color: rgba(37, 34, 34, 0.781) !important;
+    width: 100vw;
+    margin: 0px;
 }
 
+.logo{
+    height: 40px;
+}
+.navbar-toggler{
+    background-color: #eee;
+    border-color: #ff5744 !important;
+}
  .nav-item a{
     color: #ff5744 !important;
     font-size: 18px;
@@ -116,6 +125,10 @@ body{
     line-height: 35px;
     border-radius: 0 0 10px 10px;
     margin-top: -20px;
+}
+
+button ::diabled{
+    cursor: not-allowed;
 }
 
 .news-letter-form input{
@@ -266,8 +279,6 @@ textarea{
     background: rgba(68, 60, 60, 0.481);
 }
 
-
-
 .post-card{
     background: #ffffff;
     margin-bottom: 15px;
@@ -344,32 +355,33 @@ textarea{
     bottom: 0;
     left: 0;
     background: rgba(131, 126, 126, 0.481);
-    padding:50px ;
+    padding:50px 10px ;
     display: none;
     z-index: 100000;
 }
 
 .img-modal-content{
-   max-width: 90%;
-   max-height: 100%;
+   width: 100%;
+   height: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
-
-
-}
-.img-modal-body{
-    display: flex;
-    justify-content: center;
     align-items: center;
+}
+
+.img-modal-body{
     background: #ffffff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
 }
 
 .img-modal img{
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    max-width: 90vh;
+    max-height: 90vh;
+    object-fit: scale-down;
+    object-position: center;
 }
 
 /*text */
