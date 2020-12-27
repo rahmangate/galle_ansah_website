@@ -270,6 +270,7 @@ textarea{
     min-height: 200px;
     color: #ffffff;
     border-radius: 2px;
+    margin-bottom: 20px;
 }
 
 .hr,hr{
